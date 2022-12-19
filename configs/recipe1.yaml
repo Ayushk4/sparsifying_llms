@@ -1,0 +1,26 @@
+layer_patterns:
+ - "module.model.decoder.layers.*.self_attn.k_proj"
+ - "module.model.decoder.layers.*.self_attn.v_proj"
+ - "module.model.decoder.layers.*.self_attn.q_proj"
+ - "module.model.decoder.layers.*.self_attn.out_proj"
+ - "module.model.decoder.layers.*.fc1"
+ - "module.model.decoder.layers.*.fc2"
+amounts:
+ - 0.15
+ - 0.15
+ - 0.12
+ - 0.08
+ - 0.05
+scorer:
+ - magnitude
+ - magnitude
+ - magnitude
+ - magnitude
+ - magnitude
+breakpoints:
+ - 1000
+ - 2000
+ - 3000
+ - 5000
+ - 10000
+num_datapoints_score: 1000
